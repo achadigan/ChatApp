@@ -104,7 +104,7 @@ public class ChatClient {
             socket.getInputStream()));
         out = new PrintWriter(socket.getOutputStream(), true);
 
-        // Process all messages from server, accordingly to the protocol.
+        // Process all messages from server.
         while (true) {
             String line = in.readLine();
             if (line.startsWith("SUBMITNAME")) {
