@@ -17,7 +17,7 @@ import javax.swing.JTextField;
 /**
  * A simple Swing-based client for the chat server.  Graphically
  * it is a frame with a text field for entering messages and a
- * textarea to see the whole dialog.
+ * textarea to see the whole dialog.	 
  *
  * The client follows the Chat Protocol which is as follows.
  * When the server sends "SUBMITNAME" the client replies with the
@@ -104,7 +104,7 @@ public class ChatClient {
             socket.getInputStream()));
         out = new PrintWriter(socket.getOutputStream(), true);
 
-        // Process all messages from server, according to the protocol.
+        // Process all messages from server, accordingly to the protocol.
         while (true) {
             String line = in.readLine();
             if (line.startsWith("SUBMITNAME")) {
